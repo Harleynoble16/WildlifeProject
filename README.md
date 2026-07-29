@@ -10,6 +10,14 @@ The analysis:
 - identifies the five Ramsar sites with the most distinct qualifying bird species
 - plots Ramsar site locations using British National Grid coordinates, with colour representing the number of qualifying species
 
+## Results at a glance
+
+![Five largest individual bird records](output/largest_bird_records.png)
+
+![Ramsar sites with the most qualifying bird species](output/top_ramsar_sites.png)
+
+![Locations of Ramsar sites](output/ramsar_site_locations.png)
+
 ## First finding
 
 The largest individual-species records in the dataset were associated with major coastal wetland systems. Eurasian wigeon at the Ribble and Alt Estuaries had the highest recorded five-year peak mean, at 69,841 individuals during 1998/99 to 2002/03.
@@ -29,6 +37,27 @@ The program creates:
 - `output/largest_bird_records.png`
 - `output/top_ramsar_sites.png`
 - `output/ramsar_site_locations.png`
+
+## Run the analysis
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python main.py
+```
+
+The script reads `data/wildlife.csv` and recreates all three charts in the
+`output` folder.
+
+## Data source
+
+The source is the JNCC UK Ramsar Information Sheets structured dataset. This
+repository uses the historical BirdData records supplied with that dataset.
+The original JNCC resource notes that the spreadsheet has not been updated to
+reflect changes made after 2015.
+
+[View the original JNCC dataset](https://jncc.gov.uk/resources/bc9b0905-fb63-4786-8e90-5f7851bb417d)
 
 ## Important limitation
 
